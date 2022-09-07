@@ -1,6 +1,7 @@
 package me.iksad.springlab.entity;
 
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 import me.iksad.springlab.Type.SubjectType;
 
@@ -15,9 +16,9 @@ public class Lecture {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    @Setter private String name;
 
-    @Enumerated(EnumType.STRING)
+    @Setter @Enumerated(EnumType.STRING)
     private SubjectType subject;
 
     @Override
